@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+if [[ $# -ne 1 ]]; then
+       echo "Script $0, will only work with 1 fruit. Supported fruits: apple, banana, and kiwi" >&2
+       exit 1
+fi
+
+fruit="$1"
+
+case "$fruit" in
+	banana)
+	echo "bananas are yellow"
+	;;
+	apple)
+	echo "apples can be red or green"
+	;;
+	kiwi)
+	echo "kiwis are brown"
+	;;
+	*) 	
+	echo "Unknown Fruit: $fruit" >&2
+	exit 1
+	;;
+esac
+
